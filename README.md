@@ -21,7 +21,7 @@ const dinamicPath = [
     "/css/style.css"];
 ```
 
--  Define time to update the page.
+-  Define time to update the page;
 ```js
 const  timeUpdate = 1000;`
 ```
