@@ -1,13 +1,13 @@
-# Fire review
+# Fire Preview
 #### The idea it's provide a Live Preview for Firebase users that serve the hosting by functions application. In another words users of command: `firebase serve`
  
  
-### Great Achievals:
--  Watch some required files
+## Great Achievals:
+-  Watch some required files;
 -  Update the page if files has changed;
 -  Timed.
 
-### What you need to do:
+## What you need to do:
 -  Install the lib on your webpage;
 ```html
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
@@ -31,4 +31,12 @@ const  timeUpdate = 1000;`
 firePreview(dinamicPath,timeUpdate);
 ```
 
- 
+## Credits
+
+Thanks to the Stack Overflow Comunity [$http service](http://stackoverflow.com/).
+Thank you guys you are awesome!
+
+
+ ## License
+
+[MIT](LICENSE)
