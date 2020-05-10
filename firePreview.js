@@ -1,50 +1,52 @@
-function firePreview(dinamicPath, timeUpdate) {
-    const staticPath = window.location.origin + '/'
-    const actualPath = window.location.href
+firePreview(dinamicPath, timeUpdate)
 
+async function firePreview(dinamicPath, timeUpdate) {
+    const staticPath = window.location.origin + '/'
 
     if (window.location.port) {
-        const originalFiles = gotFiles(dinamicPath)
-        compareFiles(originalFiles, dinamicPath)
+        const originalFiles = await gotFiles(dinamicPath)
+        compareFiles(dinamicPath, originalFiles, timeUpdate)
     }
 
-    function compareFiles(originalFiles, dinamicPath) {
-        setInterval(() => {
-            let newestFiles = gotFiles(dinamicPath)
-            for (let index = 0; index < originalFiles.length; index++) {
-                console.log({
-                    'originalFiles': originalFiles[index],
-                    'newestFiles': newestFiles[index]
-                })
-                if (!(originalFiles[index] == newestFiles[index])) {
-                    // window.location = actualPath;
-                }
-            }
-        },
-            timeUpdate);
+    function compareFiles(dinamicPath, originalFiles, timeUpdate) {
+        let newestFiles = []
+        setInterval(async () => {
+
+            newestFiles.push(await gotFiles(dinamicPath))
+            newestFiles.forEach(newst => {
+                newst.forEach(element => {
+                    if (!originalFiles.includes(element)) {
+                        window.location.reload(true)
+                    }
+                    if (newestFiles.length > 5) {
+                        newestFiles = [];
+                    }
+                });
+            });
+        }, timeUpdate);
     }
 
-    function gotFiles(pathRequested) {
-        const originalFiles = []
-        pathRequested.forEach(async (path) => {
-            let file = await getFiles(path)
+    async function gotFiles(pathFiles) {
+        let files = []
+        pathFiles.forEach(async (pathFile) => {
+            let file = await getFiles(pathFile)
             let nHash = hash(file);
-            originalFiles.push(nHash)
+            files.push(nHash)
         });
-
-        return originalFiles
+        return await files
     }
 
     async function getFiles(pathFile) {
-        let dataReturn;
-        await $.ajax({
-            url: staticPath + pathFile,
-            method: 'GET',
-            success: function (data) {
-                dataReturn = data;
-            },
+        return await new Promise((resolve, reject) => {
+            $.ajax({
+                url: staticPath + pathFile,
+                crossDomain: true,
+                method: 'GET',
+                success: function (data) {
+                    resolve(data);
+                },
+            });
         });
-        return dataReturn;
     }
 
     function hash(s) {
@@ -54,6 +56,6 @@ function firePreview(dinamicPath, timeUpdate) {
                 h = (h << 5) - h + s.charCodeAt(i++) | 0;
         return h;
     }
-
 }
+
 
