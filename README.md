@@ -1,5 +1,4 @@
 # Fire review
-##### https://light-news.web.app/
 #### The idea it's provide a Live Preview for Firebase users that serve the hosting by functions application. In another words users of command: `firebase serve`
  
  
