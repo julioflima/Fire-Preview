@@ -28,22 +28,6 @@ const  timeUpdate = 100;
 ```html
 <script src="https://cdn.jsdelivr.net/gh/juloko/Fire-Preview/firePreview.js"></script>
 
-```
-## Fast Install:
--  Load the lib together with parameters:
-```html
-<script
-
-const dinamicPath = [
-    "index.html",
-    "js/main/lightNews.js",
-    "/css/style.css"];
-const  timeUpdate = 100;
-
-        src="https://cdn.jsdelivr.net/gh/juloko/Fire-Preview/firePreview.js"></script>
-```
-
-
 ## Credits
 
 Thanks to the  [Stack Overflow Comunity](http://stackoverflow.com/).
