@@ -3,16 +3,22 @@
  
  
 ### Great Achievals:
--  Monitor some required files.
+-  Watch some required files.
 -  Update the page if files has changed timed;
 
 ### What you need to do:
--  `const dinamicPath = [
+-  That are files that you keep watching.
+-  ```const dinamicPath = [
     "index.html",
     "js/main/lightNews.js",
     "/css/style.css"
-];`
+];```
+
+-  Define time to update the page.
 -  `const  timeUpdate = 1000;`
+
+-  Call Fire Preview.
+
 -  `firePreview(dinamicPath,timeUpdate);`
 
 
