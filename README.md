@@ -3,18 +3,23 @@
  
  
 ### Great Achievals:
--  Watch some required files.
--  Update the page if files has changed timed;
+-  Watch some required files
+-  Update the page if files has changed;
+-  Timed.
 
 ### What you need to do:
--  That are files that you keep watching.
+-  Install the lib on your webpage;
+```html
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+```
+
+-  Declare the files that you keep watching;
 ```js
 const dinamicPath = [
     "index.html",
     "js/main/lightNews.js",
     "/css/style.css"];
 ```
-
 
 -  Define time to update the page.
 ```js
