@@ -26,7 +26,7 @@ const dinamicPath = [
 
 -  Define time to update the page;
 ```js
-const  timeUpdate = 1000;`
+const  timeUpdate = 5000;`
 ```
 
 -  Call Fire Preview.
