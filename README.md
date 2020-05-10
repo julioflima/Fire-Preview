@@ -10,7 +10,7 @@
 ## What you need to do:
 #### Wait! Before you doing... On your main script, before load `firePreview.js`:
 
--  Declare the files that you keep watching;
+-  Declare the files that you keep watching:
 ```js
 const dinamicPath = [
     "index.html",
@@ -18,15 +18,31 @@ const dinamicPath = [
     "/css/style.css"];
 ```
 
--  Define time to update the page;
+-  Define time to update the page:
 ```js
-const  timeUpdate = 100;`
+const  timeUpdate = 100;
 ```
 
 #### Install:
--  Load the lib before your main script on your webpage;
+-  Load the lib before your main script on your webpage:
 ```html
 <script src="https://cdn.jsdelivr.net/gh/juloko/Fire-Preview/firePreview.js"></script>
+
+```
+## Fast Install:
+-  Load the lib together with parameters:
+```html
+<script
+``` 
+```js
+const dinamicPath = [
+    "index.html",
+    "js/main/lightNews.js",
+    "/css/style.css"];
+const  timeUpdate = 100;
+```
+```html
+        src="https://cdn.jsdelivr.net/gh/juloko/Fire-Preview/firePreview.js"></script>
 ```
 
 
