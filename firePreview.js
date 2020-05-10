@@ -42,6 +42,7 @@ async function firePreview(dinamicPath, timeUpdate) {
                 url: staticPath + pathFile,
                 crossDomain: true,
                 method: 'GET',
+                cache: false,
                 success: function (data) {
                     resolve(data);
                 },
