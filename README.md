@@ -33,7 +33,7 @@ firePreview(dinamicPath,timeUpdate);
 
 ## Credits
 
-Thanks to the Stack Overflow Comunity [$http service](http://stackoverflow.com/).
+Thanks to the  [Stack Overflow Comunity](http://stackoverflow.com/).
 Thank you guys you are awesome!
 
 
