@@ -8,13 +8,7 @@
 -  Timed.
 
 ## What you need to do:
-#### Install:
-
--  Load the lib before your main script on your webpage;
-```html
-<script src="https://cdn.jsdelivr.net/gh/juloko/Fire-Preview/firePreview.js"></script>
-```
-#### On your main script:
+#### On your main script, before load `firePreview.js`:
 
 -  Declare the files that you keep watching;
 ```js
@@ -29,10 +23,12 @@ const dinamicPath = [
 const  timeUpdate = 5000;`
 ```
 
--  Call Fire Preview.
-```js
-firePreview(dinamicPath,timeUpdate);
+#### Install:
+-  Load the lib before your main script on your webpage;
+```html
+<script src="https://cdn.jsdelivr.net/gh/juloko/Fire-Preview/firePreview.js"></script>
 ```
+
 
 ## Credits
 
