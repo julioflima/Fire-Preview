@@ -27,6 +27,7 @@ const  timeUpdate = 100;
 -  Load the lib before your main script on your webpage:
 ```html
 <script src="https://cdn.jsdelivr.net/gh/juloko/Fire-Preview/firePreview.js"></script>
+```
 
 ## Credits
 
@@ -34,6 +35,6 @@ Thanks to the  [Stack Overflow Comunity](http://stackoverflow.com/).
 Thank you guys you are awesome!
 
 
- ## License
+## License
 
 [MIT](LICENSE)
