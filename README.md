@@ -8,10 +8,13 @@
 -  Timed.
 
 ## What you need to do:
--  Install the lib on your webpage;
+#### Install:
+
+-  Load the lib before your main script on your webpage;
 ```html
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 ```
+#### On your main script:
 
 -  Declare the files that you keep watching;
 ```js
