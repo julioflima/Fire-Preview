@@ -12,7 +12,7 @@
 
 -  Load the lib before your main script on your webpage;
 ```html
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/juloko/Fire-Preview/firePreview.js"></script>
 ```
 #### On your main script:
 
