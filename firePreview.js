@@ -1,36 +1,27 @@
+function firePreview(dinamicPath, timeUpdate) {
+    const staticPath = window.location.origin + '/'
+    const actualPath = window.location.href
 
 
-(() => {
-    const pathRequested = [
-        "index.html",
-        "js/main/lightNews.js",
-        "/css/style.css"
-    ]
-    try {
-        verifyDevelopment()
-        const originalFiles = gotFiles(pathRequested)
-        compareFiles(originalFiles)
-
-    }
-    catch (error) {
-        console.log(error)
+    if (window.location.port) {
+        const originalFiles = gotFiles(dinamicPath)
+        compareFiles(originalFiles, dinamicPath)
     }
 
-    function compareFiles(originalFiles) {
+    function compareFiles(originalFiles, dinamicPath) {
         setInterval(() => {
-            let newestFiles = gotFiles(pathRequested)
+            let newestFiles = gotFiles(dinamicPath)
             for (let index = 0; index < originalFiles.length; index++) {
+                console.log({
+                    'originalFiles': originalFiles[index],
+                    'newestFiles': newestFiles[index]
+                })
                 if (!(originalFiles[index] == newestFiles[index])) {
+                    // window.location = actualPath;
                 }
             }
         },
-            1000);
-    }
-
-    function verifyDevelopment() {
-        if (!window.location.port) {
-            throw "Isn't development!"
-        }
+            timeUpdate);
     }
 
     function gotFiles(pathRequested) {
@@ -38,18 +29,16 @@
         pathRequested.forEach(async (path) => {
             let file = await getFiles(path)
             let nHash = hash(file);
-            console.log({ [path]:nHash})
             originalFiles.push(nHash)
         });
 
         return originalFiles
     }
 
-
     async function getFiles(pathFile) {
         let dataReturn;
         await $.ajax({
-            url: window.location.origin + '/' + pathFile,
+            url: staticPath + pathFile,
             method: 'GET',
             success: function (data) {
                 dataReturn = data;
@@ -66,5 +55,5 @@
         return h;
     }
 
-})()
+}
 
