@@ -8,7 +8,7 @@
 -  Timed.
 
 ## What you need to do:
-#### On your main script, before load `firePreview.js`:
+#### Wait! Before you doing... On your main script, before load `firePreview.js`:
 
 -  Declare the files that you keep watching;
 ```js
