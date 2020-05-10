@@ -20,7 +20,7 @@ const dinamicPath = [
 
 -  Define time to update the page;
 ```js
-const  timeUpdate = 5000;`
+const  timeUpdate = 100;`
 ```
 
 #### Install:
